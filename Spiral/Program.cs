@@ -11,7 +11,7 @@ namespace Spiral
 			Spiral spiral;
 
 			spiral = new Spiral(counter);
-			spiral.getSpiral();
+			spiral.GetSpiral();
 
 			Console.ReadKey();
 		}
@@ -46,7 +46,15 @@ namespace Spiral
 			x = y = SpiralSideLength / 2;
 			spiral = new string[SpiralSideLength, SpiralSideLength];
 
-			createLine(Direction.Top);
+			for (int i = 0; i < SpiralSideLength; i++)
+			{
+				for (int j = 0; j < SpiralSideLength; j++)
+				{
+					spiral[i, j] = "   ";
+				}
+			}
+
+			CreateLine(Direction.Top);
 		}
 
 		private void MoveCursor(Direction d)
@@ -85,28 +93,37 @@ namespace Spiral
 			}
 		}
 
-		private void createLine(Direction d)
+		private void CreateLine(Direction d)
 		{
 			for (int i = 0; i < Step; i++)
 			{
 				++Counter;
 				string Prefix = "";
+
 				if (Counter < 10)
 				{
 					Prefix = " ";
 				}
+
 				spiral[y, x] = Prefix + " " + Counter;
+
+				GetSpiral();
+				System.Threading.Thread.Sleep(1000);
+
 				MoveCursor(d);
+
 				if (UserNumber == Counter) 
 					return;
 			}
-			if (StepCounter % 2 == 0) Step++;
-			StepCounter++;
-			createLine(NextDirection(d));
+
+			if (StepCounter++ % 2 == 0) Step++;
+
+			CreateLine(NextDirection(d));
 		}
 
-		public void getSpiral()
+		public void GetSpiral()
 		{
+			Console.Clear();
 			for (int i = 0; i < SpiralSideLength; i++)
 			{
 				for (int j = 0; j < SpiralSideLength; j++)
