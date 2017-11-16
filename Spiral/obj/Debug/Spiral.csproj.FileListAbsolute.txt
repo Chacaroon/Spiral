@@ -1,0 +1,7 @@
+C:\Projects\C#\Spiral\Spiral\bin\Debug\Spiral.exe.config
+C:\Projects\C#\Spiral\Spiral\bin\Debug\Spiral.exe
+C:\Projects\C#\Spiral\Spiral\bin\Debug\Spiral.pdb
+C:\Projects\C#\Spiral\Spiral\obj\Debug\Spiral.csprojResolveAssemblyReference.cache
+C:\Projects\C#\Spiral\Spiral\obj\Debug\Spiral.csproj.CoreCompileInputs.cache
+C:\Projects\C#\Spiral\Spiral\obj\Debug\Spiral.exe
+C:\Projects\C#\Spiral\Spiral\obj\Debug\Spiral.pdb
